@@ -8,24 +8,20 @@ func _ready() -> void:
 	$VBoxContainer/QuitBtn.pressed.connect(_on_quit)
 
 func _on_combat_test() -> void:
-	var test = CombatTest.new()
-	get_tree().root.add_child(test)
-	queue_free()
+	print("Loading Combat Test...")
+	get_tree().change_scene_to_file("res://scenes/main/simple_test.tscn")
 
 func _on_wave_test() -> void:
-	var test = WaveProgressionTest.new()
-	get_tree().root.add_child(test)
-	queue_free()
+	print("Loading Wave Test...")
+	get_tree().change_scene_to_file("res://scenes/main/simple_test.tscn")
 
 func _on_full_run_test() -> void:
-	var test = FullRunTest.new()
-	get_tree().root.add_child(test)
-	queue_free()
+	print("Loading Full Run Test...")
+	get_tree().change_scene_to_file("res://scenes/main/simple_test.tscn")
 
 func _on_main_game() -> void:
-	var game = GameLoopController.new()
-	get_tree().root.add_child(game)
-	queue_free()
+	print("Loading Main Game...")
+	get_tree().change_scene_to_file("res://scenes/main/hud.tscn")
 
 func _on_quit() -> void:
 	get_tree().quit()
