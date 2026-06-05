@@ -12,17 +12,17 @@ config_version=5
 
 compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
+[application]
+
+config/name="RoguelikeTD-3D"
+run/main_scene="res://scenes/main/hud.tscn"
+config/features=PackedStringArray("4.6", "Forward Plus")
+
 [autoload]
 
 RelicState="*res://scripts/autoloads/relic_state.gd"
 DamageTypes="*res://scripts/autoloads/damage_types.gd"
 SaveManager="*res://scripts/autoloads/save_manager.gd"
-
-[application]
-
-config/name="RoguelikeTD-3D"
-run/main_scene="uid://cxmainhud001"
-config/features=PackedStringArray("4.6", "Forward Plus")
 
 [display]
 
