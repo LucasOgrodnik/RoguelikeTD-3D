@@ -20,13 +20,13 @@ func _setup_test_combat() -> void:
 	var enemy_pos = Vector3(5, 0, 0)
 
 	hero = Bladedancer.new()
-	hero.global_position = hero_pos
 	add_child(hero)
+	hero.global_position = hero_pos
 	combat_manager.register_hero(hero)
 
 	var enemy = SkeletonWarrior.new()
-	enemy.global_position = enemy_pos
 	add_child(enemy)
+	enemy.global_position = enemy_pos
 	enemies.append(enemy)
 	combat_manager.register_enemy(enemy)
 

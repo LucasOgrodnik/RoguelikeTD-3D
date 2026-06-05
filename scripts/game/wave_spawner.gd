@@ -22,9 +22,9 @@ func spawn_wave(wave_num: int) -> int:
 	var enemies = wave_manager.generate_wave(wave_num, current_race)
 
 	for enemy in enemies:
+		enemies_container.add_child(enemy)
 		var spawn_pos = Vector3(randf_range(-5, 5), 0, randf_range(-2, 2))
 		enemy.global_position = spawn_pos
-		enemies_container.add_child(enemy)
 
 	print("Wave %d spawned: %d enemies (Race: %s)" % [wave_num, enemies.size(), current_race])
 	wave_spawn_complete.emit(wave_num, enemies.size())
