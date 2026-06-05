@@ -7,11 +7,14 @@ var selected_heroes: Array[String] = []
 signal trio_selected(heroes: Array[String])
 
 func _ready() -> void:
-	custom_minimum_size = get_viewport_rect().size
-	anchors_top = 0.0
-	anchors_left = 0.0
-	anchors_right = 1.0
-	anchors_bottom = 1.0
+	anchor_top = 0.0
+	anchor_left = 0.0
+	anchor_right = 1.0
+	anchor_bottom = 1.0
+	offset_top = 0
+	offset_left = 0
+	offset_right = 0
+	offset_bottom = 0
 
 	var vbox = VBoxContainer.new()
 	vbox.alignment = BoxContainer.ALIGNMENT_CENTER
