@@ -8,11 +8,21 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[autoload]
+
+RelicState="*res://scripts/autoloads/relic_state.gd"
+DamageTypes="*res://scripts/autoloads/damage_types.gd"
+SaveManager="*res://scripts/autoloads/save_manager.gd"
+
 [application]
 
 config/name="RoguelikeTD-3D"
 run/main_scene="uid://cxmainhud001"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 
 [display]
 

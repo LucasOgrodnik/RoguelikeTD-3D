@@ -1,8 +1,11 @@
-[gd_scene load_steps=1 format=3 uid="uid://cxmainhud001"]
+[gd_scene load_steps=2 format=3 uid="uid://cxmainhud001"]
+
+[ext_resource type="Script" path="res://scripts/rendering/camera_manager.gd" id="1_v8h2c"]
 
 [node name="HUD" type="Node3D"]
 
-[node name="GameCamera" type="Node3D" parent="."]
+[node name="GameCamera" type="Node3D" parent="." node_paths=PackedStringArray("camera")]
+script = ExtResource("1_v8h2c")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 15, 20)
 
 [node name="Camera3D" type="Camera3D" parent="GameCamera"]
