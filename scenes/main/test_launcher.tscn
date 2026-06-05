@@ -1,55 +1,55 @@
-[gd_scene load_steps=2 format=3 uid="uid://testlauncher001"]
+[gd_scene load_steps=2 format=3 uid="uid://dnbhhns2rpxye"]
 
 [ext_resource type="Script" path="res://scripts/ui/test_launcher.gd" id="1_test"]
 
 [node name="TestLauncher" type="Control"]
-script = ExtResource("1_test")
-anchor_top = 0.0
 anchor_left = 0.0
+anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 0
-offset_left = 0
-offset_right = 0
-offset_bottom = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+script = ExtResource("1_test")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchor_top = 0.5
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -150.0
-offset_right = 100.0
-offset_bottom = 150.0
+offset_left = -150.0
+offset_top = -200.0
+offset_right = 150.0
+offset_bottom = 200.0
 alignment = 1
 
 [node name="Title" type="Label" parent="VBoxContainer"]
-text = "ROGUELIKE TD - 3D TEST"
 custom_minimum_size = Vector2(0, 50)
+text = "ROGUELIKE TD - 3D TEST"
 
 [node name="Spacer1" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 20)
 
 [node name="CombatBtn" type="Button" parent="VBoxContainer"]
-text = "1. Combat Test (Hero vs Enemy)"
 custom_minimum_size = Vector2(300, 50)
+text = "1. Combat Test (Hero vs Enemy)"
 
 [node name="WaveBtn" type="Button" parent="VBoxContainer"]
-text = "2. Wave Progression (1-20 waves)"
 custom_minimum_size = Vector2(300, 50)
+text = "2. Wave Progression (1-20 waves)"
 
 [node name="FullRunBtn" type="Button" parent="VBoxContainer"]
-text = "3. Full Run Test (Complete game)"
 custom_minimum_size = Vector2(300, 50)
+text = "3. Full Run Test (Complete game)"
 
 [node name="MainGameBtn" type="Button" parent="VBoxContainer"]
-text = "4. Main Game (Play full)"
 custom_minimum_size = Vector2(300, 50)
+text = "4. Main Game (Play full)"
 
 [node name="Spacer2" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 20)
 
 [node name="QuitBtn" type="Button" parent="VBoxContainer"]
-text = "Quit"
 custom_minimum_size = Vector2(300, 50)
+text = "Quit"
