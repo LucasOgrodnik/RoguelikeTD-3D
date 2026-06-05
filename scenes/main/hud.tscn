@@ -1,0 +1,26 @@
+[gd_scene load_steps=1 format=3 uid="uid://cxmainhud001"]
+
+[node name="HUD" type="Node3D"]
+
+[node name="GameCamera" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 15, 20)
+
+[node name="Camera3D" type="Camera3D" parent="GameCamera"]
+projection = 1
+size = 12.0
+near = 0.01
+far = 1000.0
+
+[node name="GameWorld" type="Node3D" parent="."]
+
+[node name="Terrain" type="Node3D" parent="GameWorld"]
+
+[node name="Heroes" type="Node3D" parent="GameWorld"]
+
+[node name="Enemies" type="Node3D" parent="GameWorld"]
+
+[node name="Effects" type="Node3D" parent="GameWorld"]
+
+[node name="Projectiles" type="Node3D" parent="GameWorld"]
+
+[node name="UI" type="CanvasLayer" parent="."]
