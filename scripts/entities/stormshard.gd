@@ -38,14 +38,14 @@ func _perform_attack(target: Node3D) -> void:
 	attacked.emit(target, dmg)
 
 func trigger_lightning() -> void:
-	if use_charge(10):
+	if charges >= 10:
 		var enemies_node = get_node_or_null("../../GameWorld/Enemies")
 		if enemies_node:
 			for enemy in enemies_node.get_children():
 				if enemy is Node3D and enemy.has_method("take_damage"):
 					var distance = global_position.distance_to(enemy.global_position)
 					if distance <= attack_range * 1.5:
-						var dmg = damage * 2.0
+						var dmg = damage * 2.5
 						enemy.take_damage(dmg, DamageTypes.Type.ELECTRIQUE, hero_name)
-
-	trigger_ultimate()
+		charges = 0
+		trigger_ultimate()

@@ -31,14 +31,17 @@ func _add_combustible_stack(target: Node3D, amount: int) -> void:
 
 func trigger_ignition() -> void:
 	var enemies_node = get_node_or_null("../../GameWorld/Enemies")
+	var triggered = false
 	if enemies_node:
 		for enemy in enemies_node.get_children():
 			if enemy is Node3D and enemy.has_method("take_damage"):
 				var target_id = enemy.get_instance_id()
 				var stacks = combustible_stacks.get(target_id, 0)
 				if stacks >= 3:
-					var dmg = damage * 2.0 * stacks
+					var dmg = damage * 3.0 * stacks
 					enemy.take_damage(dmg, DamageTypes.Type.FEU, hero_name)
 					combustible_stacks.erase(target_id)
+					triggered = true
 
-	trigger_ultimate()
+	if triggered:
+		trigger_ultimate()

@@ -27,11 +27,12 @@ func use_elan(amount: int) -> bool:
 	return false
 
 func trigger_whirlwind() -> void:
-	if use_elan(4):
+	if elan >= 4:
 		var enemies_node = get_node_or_null("../../GameWorld/Enemies")
 		if enemies_node:
 			for enemy in enemies_node.get_children():
 				if enemy is Node3D and enemy.has_method("take_damage"):
-					var dmg = damage * 1.5
+					var dmg = damage * 2.0
 					enemy.take_damage(dmg, DamageTypes.Type.TRANCHANT, hero_name)
+		elan = 0
 		trigger_ultimate()
