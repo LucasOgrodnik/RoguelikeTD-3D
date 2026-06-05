@@ -1,5 +1,4 @@
-class_name SaveManager
-extends RefCounted
+extends Node
 
 const SAVE_PATH := "user://save_data.json"
 
