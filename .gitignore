@@ -1,0 +1,23 @@
+# Godot
+.godot/
+*.import
+*.uid
+export_presets.cfg
+
+# Absolute-Human board (local working state)
+.absolute-human/
+
+# Build artifacts
+export/
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
